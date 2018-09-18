@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import JWLibrary from "./JWLibrary";
 
 class JWWrapper extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class JWWrapper extends Component {
 
   componentDidMount() {
     const jwScript = document.createElement("script");
-    jwScript.src = "https://content.jwplatform.com/libraries/BjcwyK37.js";
+    jwScript.src = JWLibrary;
     jwScript.async = true;
     jwScript.onload = this.setupJWPlayer;
     this.setState({
